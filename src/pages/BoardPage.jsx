@@ -1,7 +1,7 @@
 import React from "react";
 import { useTasks } from "../context/TaskContext";
 import TaskCard from "../components/TaskCard";
-import "./boardPage.css";
+import "../styles/boardPage.css";
 
 const BoardPage = () => {
   const { tasks } = useTasks();
