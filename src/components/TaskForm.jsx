@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTasks } from "../context/TaskContext";
+import '../styles/TaskForm.css'
 
 const TaskForm = () => {
   const { dispatch } = useTasks();
