@@ -1,5 +1,6 @@
 import React from "react";
 import { useTasks } from "../context/TaskContext";
+import BoardPage from "./BoardPage";
 
 const DashboardPage = () => {
   const { tasks } = useTasks();
@@ -11,11 +12,25 @@ const DashboardPage = () => {
   };
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>To Do: {summary.todo}</p>
-      <p>In Progress: {summary.inprogress}</p>
-      <p>Done: {summary.done}</p>
+    <div className="container mt-4">
+      <h2 className="text-center">Dashboard</h2>
+
+      <div className="row text-center mb-4">
+        <div className="col">
+          <h5>To Do</h5>
+          <p>{summary.todo}</p>
+        </div>
+        <div className="col">
+          <h5>In Progress</h5>
+          <p>{summary.inprogress}</p>
+        </div>
+        <div className="col">
+          <h5>Done</h5>
+          <p>{summary.done}</p>
+        </div>
+      </div>
+
+      <BoardPage />
     </div>
   );
 };

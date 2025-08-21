@@ -7,6 +7,7 @@ import ToDoPage from "./pages/ToDoPage";
 import InProgressPage from "./pages/InProgressPage";
 import DonePage from "./pages/DonePage";
 import TaskForm from "./components/TaskForm";
+import BoardPage from "./pages/BoardPage";
 
 const App = () => (
   <TaskProvider>
@@ -14,6 +15,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="board" element={<BoardPage />} />
           <Route path="todo" element={<ToDoPage />} />
           <Route path="inprogress" element={<InProgressPage />} />
           <Route path="done" element={<DonePage />} />
