@@ -6,7 +6,7 @@ import { TbDashboardFilled } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => (
-  <div style={{ width: "200px", background: "#f4f4f4", padding: "20px" }}>
+  <div style={{ width: "200px", background: "#9c4242ff", padding: "20px" }}>
     <h3>Kanban Board</h3>
     <nav>
       <ul style={{ listStyle: "none", padding: 0 }}>
