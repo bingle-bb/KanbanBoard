@@ -4,12 +4,13 @@ import { AiOutlineFileDone } from "react-icons/ai";
 import { MdCenterFocusStrong } from "react-icons/md";
 import { TbDashboardFilled } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
+import "../styles/Sidebar.css";
 
 const Sidebar = () => (
-  <div style={{ width: "200px", background: "#9c4242ff", padding: "20px" }}>
+  <div className="sidebar">
     <h3>Kanban Board</h3>
     <nav>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <ul>
         <li>
           <NavLink to="/create-task">
             <button>+ Create Task</button>
@@ -33,8 +34,7 @@ const Sidebar = () => (
         </li>
         <li>
           <NavLink to="/done">
-            <AiOutlineFileDone />
-            Done
+            <AiOutlineFileDone /> Done
           </NavLink>
         </li>
       </ul>
