@@ -16,16 +16,26 @@ const Sidebar = () => (
           </NavLink>
         </li>
         <li>
-          <NavLink to="/dashboard"><TbDashboardFilled/>Dashboard</NavLink>
+          <NavLink to="/dashboard">
+            <TbDashboardFilled />
+            Dashboard
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/todo"><IoMdListBox/> To Do</NavLink>
+          <NavLink to="/todo">
+            <IoMdListBox /> To Do
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/inprogress"><MdCenterFocusStrong/> In Progress</NavLink>
+          <NavLink to="/inprogress">
+            <MdCenterFocusStrong /> In Progress
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/done"><AiOutlineFileDone />Done</NavLink>
+          <NavLink to="/done">
+            <AiOutlineFileDone />
+            Done
+          </NavLink>
         </li>
       </ul>
     </nav>
