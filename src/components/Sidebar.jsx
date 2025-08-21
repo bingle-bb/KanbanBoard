@@ -1,4 +1,8 @@
 import React from "react";
+import { IoMdListBox } from "react-icons/io";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { MdCenterFocusStrong } from "react-icons/md";
+import { TbDashboardFilled } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => (
@@ -12,16 +16,16 @@ const Sidebar = () => (
           </NavLink>
         </li>
         <li>
-          <NavLink to="/dashboard">Dashboard</NavLink>
+          <NavLink to="/dashboard"><TbDashboardFilled/>Dashboard</NavLink>
         </li>
         <li>
-          <NavLink to="/todo">To Do</NavLink>
+          <NavLink to="/todo"><IoMdListBox/> To Do</NavLink>
         </li>
         <li>
-          <NavLink to="/inprogress">In Progress</NavLink>
+          <NavLink to="/inprogress"><MdCenterFocusStrong/> In Progress</NavLink>
         </li>
         <li>
-          <NavLink to="/done">Done</NavLink>
+          <NavLink to="/done"><AiOutlineFileDone />Done</NavLink>
         </li>
       </ul>
     </nav>
