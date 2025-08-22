@@ -1,43 +1,47 @@
 import React from "react";
-import { RiCalendarTodoLine } from "react-icons/ri";
+import { IoMdListBox } from "react-icons/io";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { MdCenterFocusStrong } from "react-icons/md";
-import { LuLayoutDashboard } from "react-icons/lu";
+import { TbDashboardFilled } from "react-icons/tb";
+import { Gauge, ClipboardList, BarChart3, CheckCircle } from "lucide-react";
+
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
 
 const Sidebar = () => (
   <div className="sidebar">
     <h3>Kanban Board</h3>
-    
-    <div className="create_button_control">
-      
-          <NavLink to="/create-task">
-            <button>+ Create Task</button>
-          </NavLink>
-        
-    </div>
     <nav>
       <ul>
         <li>
-          <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
-            <LuLayoutDashboard />
-            Dashboard
+          <NavLink to="/create-task">
+            <button>
+              +<span> Create Task</span>
+            </button>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/dashboard">
+            <Gauge size={21} />
+            <span>Dashboard</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/todo">
-            <RiCalendarTodoLine /> To Do
+            <ClipboardList size={21} />
+            <span>To Do</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/inprogress">
-            <MdCenterFocusStrong /> In Progress
+            <BarChart3 size={21} />
+            <span>In Progress</span>
           </NavLink>
         </li>
         <li>
           <NavLink to="/done">
-            <AiOutlineFileDone /> Done
+            <CheckCircle size={21} />
+            <span>Done</span>
           </NavLink>
         </li>
       </ul>
