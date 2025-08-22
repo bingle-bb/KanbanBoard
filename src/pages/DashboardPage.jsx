@@ -1,6 +1,7 @@
 import React from "react";
 import { useTasks } from "../context/TaskContext";
 import BoardPage from "./BoardPage";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/dashBoard.css";
 
 const DashboardPage = () => {
@@ -14,20 +15,34 @@ const DashboardPage = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center">Dashboard</h2>
+      <h2 className="text-center mb-4">Dashboard</h2>
 
-      <div className="dashboard-summary-row">
-        <div className="dashboard-summary-col">
-          <h5>To Do</h5>
-          <p>{summary.todo}</p>
+      <div className="row mb-4">
+        <div className="badgeCard col-md-4 mb-3">
+          <div className="card text-center border-primary">
+            <div className="card-body ">
+              <h5 className="card-title">To Do</h5>
+              <p className="card-text display-1">{summary.todo}</p>
+            </div>
+          </div>
         </div>
-        <div className="dashboard-summary-col">
-          <h5>In Progress</h5>
-          <p>{summary.inprogress}</p>
+
+        <div className="badgeCard col-md-4 mb-3">
+          <div className="card text-center border-warning">
+            <div className="card-body">
+              <h5 className="card-title">In Progress</h5>
+              <p className="card-text display-1">{summary.inprogress}</p>
+            </div>
+          </div>
         </div>
-        <div className="dashboard-summary-col">
-          <h5>Done</h5>
-          <p>{summary.done}</p>
+
+        <div className="badgeCard col-md-4 mb-3">
+          <div className="card text-center border-success">
+            <div className="card-body">
+              <h5 className="card-title">Done</h5>
+              <p className="card-text display-1">{summary.done}</p>
+            </div>
+          </div>
         </div>
       </div>
 

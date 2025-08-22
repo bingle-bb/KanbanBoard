@@ -7,7 +7,7 @@ const initialState = {
     {
       id: 1,
       title: "Collecting data for project",
-      des: "dododo",
+      description: "dododo",
       status: "todo",
       due: "2025-11-05",
     },

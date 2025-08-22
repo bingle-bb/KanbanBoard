@@ -1,16 +1,14 @@
-/* TaskForm.css */
-
 .taskform_container {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: none;
   position: relative;
   align-items: center;
 }
 
-.taskform_control{
+.taskform_control {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
@@ -27,11 +25,8 @@
   width: 150px;
   border-bottom: 2px solid #ccc;
   display: block;
-  padding-bottom:1rem;
-
+  padding-bottom: 1rem;
 }
-
-
 
 /* Input fields */
 /* Inputs, textarea, select */
@@ -49,10 +44,10 @@
 }
 
 .work_flow_control select {
-  width: 325px;
-  appearance: none;       /* removes default arrow (Chrome, Safari) */
-  -moz-appearance: none;  /* Firefox */
-  -ms-appearance: none;   /* IE/Edge */
+  width: 300px;
+  appearance: none; /* removes default arrow (Chrome, Safari) */
+  -moz-appearance: none; /* Firefox */
+  -ms-appearance: none; /* IE/Edge */
   background-color: white;
   border: 1px solid #ccc;
   padding: 8px 12px;
@@ -73,8 +68,8 @@
 .description_input_control textarea:focus,
 .work_flow_control select:focus,
 .date_select_control input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 1px #2563eb;
+  border-color: #164b82;
+  box-shadow: 0 0 0 1px #164a82ac;
 }
 
 /* Labels */
@@ -98,7 +93,7 @@
 /* Button */
 .taskform_container button {
   display: inline-block;
-  background-color: #1d4ed8;
+  background-color: #164b82;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -112,6 +107,6 @@
 }
 
 .taskform_container button:hover {
-  background-color: #1e40af; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background-color: #164b82;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
