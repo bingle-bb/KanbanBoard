@@ -13,21 +13,19 @@ const BoardPage = () => {
   ];
 
   return (
-    <div className="container board-container">
-      <div className="row">
-        {statuses.map((status) => (
-          <div className="col board-column" key={status.key}>
-            <h3>{status.label}</h3>
-            <div>
-              {tasks
-                .filter((task) => task.status === status.key)
-                .map((task) => (
-                  <TaskCard key={task.id} task={task} className="task-card" />
-                ))}
-            </div>
+    <div className="board-container">
+      {statuses.map((status) => (
+        <div className="board-column" key={status.key}>
+          <h3>{status.label}</h3>
+          <div className="b-div">
+            {tasks
+              .filter((task) => task.status === status.key)
+              .map((task) => (
+                <TaskCard key={task.id} task={task} />
+              ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

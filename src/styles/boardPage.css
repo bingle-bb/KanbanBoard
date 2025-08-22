@@ -1,19 +1,45 @@
 .board-container {
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .board-column {
-  min-height: 80vh;
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
+  flex: 1;
+  height: 80vh;
+  padding: 20px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .board-column h3 {
   text-align: center;
   margin-bottom: 15px;
   color: #333;
+  border-bottom: 3px solid black;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.b-div {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.b-div::-webkit-scrollbar {
+  width: 4px;
+}
+
+.b-div::-webkit-scrollbar-thumb {
+  background-color: #294c83;
+  border-radius: 10px;
 }
 
 .task-card {

@@ -7,7 +7,7 @@ const ToDoPage = () => {
   const todoTasks = tasks.filter((t) => t.status === "todo");
 
   return (
-    <div>
+    <div className="todo">
       <h2>To Do</h2>
 
       <TaskList tasks={todoTasks} />

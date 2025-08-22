@@ -1,22 +1,22 @@
 import React from "react";
 import { useTasks } from "../context/TaskContext";
+import "../styles/TestCard.css";
 
 const TaskCard = ({ task }) => {
   const { dispatch } = useTasks();
 
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        margin: "10px",
-        padding: "10px",
-        borderRadius: "6px",
-      }}
-    >
-      <h4>{task.title}</h4>
-      <p>{task.description}</p>
-      <p>Due: {task.due}</p>
-      <div>
+    <div className="task-card">
+      <div className="card-div">
+        <h4>{task.title}</h4>
+        <p>{task.description}</p>
+        <p>
+          Due:
+          <span className="due-date">{task.due}</span>
+        </p>
+      </div>
+
+      <div className="btn-div">
         {task.status === "todo" && (
           <button
             onClick={() =>
@@ -25,6 +25,7 @@ const TaskCard = ({ task }) => {
                 payload: { id: task.id, status: "inprogress" },
               })
             }
+            style={{ color: "white", backgroundColor: "#294c83" }}
           >
             Start
           </button>
@@ -37,6 +38,7 @@ const TaskCard = ({ task }) => {
                 payload: { id: task.id, status: "done" },
               })
             }
+            style={{ color: "white", backgroundColor: "#294c83" }}
           >
             Finish
           </button>
