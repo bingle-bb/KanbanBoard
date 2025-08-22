@@ -32,55 +32,70 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
-      {/* Title */}
-      <input
-        type="text"
-        placeholder="Enter task title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        required
-        style={{ display: "block", marginBottom: "10px", width: "300px" }}
-      />
+    <div className="taskform_container mx-auto ms-2">
+        <div className="taskform_control ">
+          <h2 className="taskform_title ">Create project</h2>
+        <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
+        {/* Title */}
+        <div className="title_input_control">
+          <label htmlFor="title">Title</label>
+          <input
+          type="text"
+          placeholder="Enter task title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          style={{ display: "block", marginBottom: "10px", width: "300px" }}
+        />
+        </div>
 
-      {/* Description */}
-      <textarea
-        placeholder="Enter task description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        style={{
-          display: "block",
-          marginBottom: "10px",
-          width: "300px",
-          height: "80px",
-        }}
-      />
+        {/* Description */}
+        <div className="description_input_control">
+          <label htmlFor="description">Description</label>
+        <textarea
+          placeholder="Enter task description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          style={{
+            display: "block",
+            marginBottom: "10px",
+            width: "300px",
+            height: "80px",
+          }}
+        />
+        </div>
 
-      {/* Workflow / Status */}
-      <label>Workflow: </label>
-      <select
-        value={status}
-        onChange={(e) => setStatus(e.target.value)}
-        style={{ marginBottom: "10px" }}
-      >
-        <option value="todo">To Do</option>
-        <option value="inprogress">In Progress</option>
-        <option value="done">Done</option>
-      </select>
+        {/* Workflow / Status */}
+        <div className="work_flow_control">
+          <label>Workflow </label>
+        <select
+          value={status}
+          onChange={(e) => setStatus(e.target.value)}
+          style={{ marginBottom: "10px" , display:"block" }}
+        >
+          <option value="todo">To Do</option>
+          <option value="inprogress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        </div>
 
-      {/* Due date */}
-      <br />
-      <label>Due Date: </label>
-      <input
-        type="date"
-        value={due}
-        onChange={(e) => setDue(e.target.value)}
-        style={{ marginBottom: "10px" }}
-      />
-      <br />
+        {/* Due date */}
+        
+        <div className="date_select_control">
+          <label>Due Date </label>
+        <input
+          type="date"
+          value={due}
+          onChange={(e) => setDue(e.target.value)}
+              style={{ marginBottom: "10px", display:"block" }}
+        />
+        <br />
+        </div>
 
-      <button type="submit">Add Task</button>
-    </form>
+        <button type="submit">Create</button>
+      </form>
+        </div>
+    </div>
   );
 };
 

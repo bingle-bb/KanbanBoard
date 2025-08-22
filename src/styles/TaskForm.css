@@ -1,0 +1,92 @@
+/* TaskForm.css */
+
+.taskform_container {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  align-items: center;
+}
+
+.taskform_control{
+  /* border: 1px solid black; */
+  align-items: center;
+  
+}
+
+.taskform_title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto !important;
+  color: #333;
+  width: 150px;
+  border-bottom: 2px solid #ccc;
+  display: block;
+  padding-bottom:1rem;
+
+}
+
+.title_input_control,
+.description_input_control,
+.work_flow_control,
+.date_select_contro{
+  margin-left: 450px;
+}
+
+/* Input fields */
+.taskform_container input[type="text"],
+.taskform_container textarea,
+.taskform_container select,
+.taskform_container input[type="date"] {
+  width: 300px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.taskform_container input:focus,
+.taskform_container textarea:focus,
+.taskform_container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* Labels */
+.taskform_container label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 10px;
+  color: #444;
+}
+
+/* Textarea */
+.taskform_container textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* Button */
+.taskform_container button {
+  display: inline-block;
+  background-color: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 40px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.taskform_container button:hover {
+  background-color: #1e40af;
+}
