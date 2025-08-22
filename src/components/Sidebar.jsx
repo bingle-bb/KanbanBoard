@@ -1,30 +1,33 @@
 import React from "react";
-import { IoMdListBox } from "react-icons/io";
+import { RiCalendarTodoLine } from "react-icons/ri";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { MdCenterFocusStrong } from "react-icons/md";
-import { TbDashboardFilled } from "react-icons/tb";
+import { LuLayoutDashboard } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
 
 const Sidebar = () => (
   <div className="sidebar">
     <h3>Kanban Board</h3>
-    <nav>
-      <ul>
-        <li>
+    
+    <div className="create_button_control">
+      
           <NavLink to="/create-task">
             <button>+ Create Task</button>
           </NavLink>
-        </li>
+        
+    </div>
+    <nav>
+      <ul>
         <li>
-          <NavLink to="/dashboard">
-            <TbDashboardFilled />
+          <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
+            <LuLayoutDashboard />
             Dashboard
           </NavLink>
         </li>
         <li>
           <NavLink to="/todo">
-            <IoMdListBox /> To Do
+            <RiCalendarTodoLine /> To Do
           </NavLink>
         </li>
         <li>

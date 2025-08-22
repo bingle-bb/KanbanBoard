@@ -14,9 +14,13 @@
 .sidebar h3 {
   font-size: 1.5rem;
 
-  text-align: center;
+  text-align: start;
   letter-spacing: 1px;
-  color: #164b82;
+  color: #0a3f75;
+}
+
+.create_button_control{
+  margin-top: -30px;
 }
 
 .sidebar nav ul {
@@ -34,9 +38,8 @@
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #555;
+  color: black;
   padding: 10px 12px;
-  border-radius: 8px;
   font-weight: 500;
 }
 
@@ -52,5 +55,30 @@
 }
 
 .sidebar button:hover {
-  background: #164a823f;
+  background: #6ca0d53f;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 2px solid transparent; /* invisible by default */
+  transition: border-color 0.5s ease, color 0.5s ease;
+}
+
+.sidebar ul li a.active {
+  border-bottom: 1px solid #007bff; 
+  
 }

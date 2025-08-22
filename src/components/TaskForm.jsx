@@ -73,7 +73,7 @@ const TaskForm = () => {
           onChange={(e) => setStatus(e.target.value)}
           style={{ marginBottom: "10px" , display:"block" }}
         >
-          <option value="todo">To Do</option>
+          <option  value="todo">To Do</option>
           <option value="inprogress">In Progress</option>
           <option value="done">Done</option>
         </select>

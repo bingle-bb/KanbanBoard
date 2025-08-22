@@ -12,8 +12,10 @@
 
 .taskform_control{
   /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  
+  gap: 10px;
 }
 
 .taskform_title {
@@ -29,19 +31,15 @@
 
 }
 
-.title_input_control,
-.description_input_control,
-.work_flow_control,
-.date_select_contro{
-  margin-left: 450px;
-}
+
 
 /* Input fields */
-.taskform_container input[type="text"],
-.taskform_container textarea,
-.taskform_container select,
-.taskform_container input[type="date"] {
-  width: 300px;
+/* Inputs, textarea, select */
+.title_input_control input,
+.description_input_control textarea,
+.work_flow_control select,
+.date_select_control input {
+  /* width: 300px; */
   padding: 0.6rem 0.8rem;
   border: 1px solid #d1d5db;
   border-radius: 6px;
@@ -50,19 +48,45 @@
   transition: border 0.2s ease-in-out;
 }
 
-.taskform_container input:focus,
-.taskform_container textarea:focus,
-.taskform_container select:focus {
+.work_flow_control select {
+  width: 325px;
+  appearance: none;       /* removes default arrow (Chrome, Safari) */
+  -moz-appearance: none;  /* Firefox */
+  -ms-appearance: none;   /* IE/Edge */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+.date_select_control input {
+  width: 300px;
+}
+
+.title_input_control input:focus,
+.description_input_control textarea:focus,
+.work_flow_control select:focus,
+.date_select_control input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 1px #2563eb;
 }
 
 /* Labels */
-.taskform_container label {
+.title_input_control label,
+.description_input_control label,
+.work_flow_control label,
+.date_select_control label {
   font-size: 0.9rem;
   font-weight: 500;
-  margin-right: 10px;
-  color: #444;
+  margin-bottom: 6px;
+  color: #333;
+  text-align: start;
 }
 
 /* Textarea */
@@ -78,7 +102,7 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 5px 40px;
+  padding: 10px 40px;
   font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
@@ -88,5 +112,6 @@
 }
 
 .taskform_container button:hover {
-  background-color: #1e40af;
+  background-color: #1e40af; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
