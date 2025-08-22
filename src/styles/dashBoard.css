@@ -1,0 +1,14 @@
+.dashboard-summary-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between columns */
+  margin-bottom: 24px;
+}
+
+.dashboard-summary-col {
+  flex: 1;
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
