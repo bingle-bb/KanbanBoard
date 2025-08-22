@@ -1,26 +1,18 @@
 .sidebar {
   width: 200px;
-  background: #164a8214;
-  padding: 10px;
   min-height: 100vh;
-  color: #164b82;
-  /* box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); */
-  border-radius: 0 16px 16px 0; /* rounded right corners */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  background: #eff2fb;
+  border-right: 1px solid #ddd;
+  border-radius: 0 16px 16px 0;
+  padding: 1.5rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar h3 {
-  font-size: 1.5rem;
-
-  text-align: start;
-  letter-spacing: 1px;
-  color: #0a3f75;
-}
-
-.create_button_control{
-  margin-top: -30px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
 }
 
 .sidebar nav ul {
@@ -29,56 +21,71 @@
   margin: 0;
 }
 
-.sidebar nav li {
-  margin: 12px 0;
+.sidebar nav ul li {
+  margin-bottom: 0.5rem;
 }
 
-.sidebar nav a {
+.sidebar nav ul li a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.6rem;
   text-decoration: none;
-  color: black;
-  padding: 10px 12px;
-  font-weight: 500;
-}
-
-.sidebar button {
-  width: 100%;
-  padding: 10px;
-  background: white;
-  border: none;
-  border-radius: 8px;
-  color: #555;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.sidebar button:hover {
-  background: #6ca0d53f;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
+  text-align: center;
   color: #333;
-  padding: 6px 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border-bottom: 2px solid transparent; /* invisible by default */
-  transition: border-color 0.5s ease, color 0.5s ease;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.sidebar ul li a.active {
-  border-bottom: 1px solid #007bff; 
-  
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  color: #164b82;
+}
+
+.sidebar nav ul li button {
+  background: white;
+  color: #333;
+  border: none;
+  text-align: center;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.sidebar nav ul li button:hover {
+  background: #164b82;
+  color: white;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 75px;
+    padding: 1rem 0.5rem;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .sidebar nav ul li a {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .sidebar nav ul li a span,
+  .sidebar nav ul li a::after {
+    display: none;
+  }
+
+  .sidebar nav ul li button {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
 }
