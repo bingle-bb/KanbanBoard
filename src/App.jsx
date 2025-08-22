@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { TaskProvider } from "./context/TaskContext";
 import Layout from "./components/Layout";
+import { Navigate } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
 import ToDoPage from "./pages/ToDoPage";
 import InProgressPage from "./pages/InProgressPage";
@@ -14,6 +15,7 @@ const App = () => (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="board" element={<BoardPage />} />
           <Route path="todo" element={<ToDoPage />} />
